@@ -1,0 +1,21 @@
+<h1><%= title %></h1>
+
+<%= form_with model: product do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <%# Form Errors %>
+  <% unless product.errors.empty? %>
+    <ul>
+      <% product.errors.full_messages.each do |error| %>
+        <li style='color: red'><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div style="margin: 1em 0">
+    <%= form.submit %>
+  </div>
+<% end %>

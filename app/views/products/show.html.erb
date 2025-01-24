@@ -5,4 +5,5 @@
 <div style="display: flex; gap: 1em">
   <%= link_to "Back", products_path %>
   <%= link_to "Edit", edit_product_path(@product) %>
+  <%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
 </div>

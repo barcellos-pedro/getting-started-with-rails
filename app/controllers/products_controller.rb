@@ -1,14 +1,11 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: %i[ show edit update destroy ]
+
   def index
     @products = Product.all
   end
 
   def show
-    begin
-      @product = find_by_id
-    rescue ActiveRecord::RecordNotFound => err
-      logger.debug err
-    end
   end
 
   def new
@@ -26,12 +23,9 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = find_by_id
   end
 
   def update
-    @product = find_by_id
-
     if @product.update(product_params)
       redirect_to @product, notice: "Product updated"
     else
@@ -39,13 +33,27 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    @product.destroy
+    redirect_to products_path
+  end
+
   private
-    def product_params
-      puts "[PARAMS]\n" + params.inspect
-      params.expect(product: [ :name ])
+    def set_product
+        @product = find_by_id
     end
 
     def find_by_id
-      Product.find(params[:id])
+      begin
+        Product.find(params[:id])
+      rescue ActiveRecord::RecordNotFound => err
+        logger.debug err
+        nil
+      end
+    end
+
+    def product_params
+      puts "### params" + params.inspect
+      params.expect(product: [ :name ])
     end
 end
