@@ -1,0 +1,10 @@
+<nav id='navigation' style='display: flex; justify-content: space-between;'>
+  <%# Users %>
+  <% if authenticated? %>
+    <%= link_to "Home", root_path %>
+    <%= button_to "Log out", session_path, method: :delete %>
+  <% else %>
+    <%# Guests %>
+    <%= link_to "Login", new_session_path, style: 'flex: 1' unless current_page? new_session_path %>
+  <% end %>
+</nav>

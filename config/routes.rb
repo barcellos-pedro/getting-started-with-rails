@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resource :session
-  resources :passwords, param: :token
   root "products#index"
+
+  resource :session
+
+  resources :passwords, param: :token
 
   # All routes (CRUD)
   resources :products

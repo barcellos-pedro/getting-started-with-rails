@@ -2,15 +2,20 @@
 
 <%= form_with model: product do |form| %>
   <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :name, style: 'margin-bottom: 0.5em' %>
+    <%= form.text_field :name, required: true, autofocus: true, autocomplete: "product-name", placeholder: "E.g: Leather Jacket" %>
+
+    <%= form.label :description, style: 'display: block' %>
+    <%= form.rich_text_area :description %>
   </div>
 
   <%# Form Errors %>
   <% unless product.errors.empty? %>
     <ul>
       <% product.errors.full_messages.each do |error| %>
-        <li style='color: red'><%= error %></li>
+        <li style='color: red'>
+          <%= error %>
+        </li>
       <% end %>
     </ul>
   <% end %>
