@@ -54,7 +54,7 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      puts "### Params\," + params.inspect
-      params.expect(product: [ :name, :description ])
+      puts "### Params \n" + params.inspect
+      params.expect(product: [ :name, :description, :featured_image ])
     end
 end
