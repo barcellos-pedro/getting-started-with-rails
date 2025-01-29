@@ -1,0 +1,10 @@
+es:
+  greet: "Hola mundo"
+  nav:
+    home: 'Inicio'
+    login: 'Ingresar'
+    logout: 'Salir'
+  products:
+      index:
+        title: 'Productos'
+        new_btn: 'Nuevo Producto'

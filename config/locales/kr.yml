@@ -1,0 +1,10 @@
+kr:
+  greet: "안녕하세요"
+  nav:
+    home: '집'
+    login: '입력하다'
+    logout: '출구'
+  products:
+      index:
+        title: '제품'
+        new_btn: '새로운 제품'
