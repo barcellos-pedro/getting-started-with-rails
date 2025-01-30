@@ -19,9 +19,6 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - name: Update shebang for brakeman
-        run: sed -i '1s|.*|#!/usr/bin/env ruby|' bin/brakeman
-
       - name: Set permission for brakeman
         run: chmod +x bin/brakeman
 
@@ -87,10 +84,7 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - name: Update shebang for Ruby
-        run: sed -i '1s|.*|#!/usr/bin/env ruby|' bin/ruby
-
-      - name: Set permission for rubocop
+      - name: Set permission for rails
         run: chmod +x bin/rails
 
       - name: Run tests
