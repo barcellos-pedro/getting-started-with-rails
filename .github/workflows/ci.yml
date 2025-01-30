@@ -19,6 +19,9 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      - name: Set permission for brakeman
+        run: chmod +x bin/brakeman
+
       - name: Set permission for rubocop
         run: chmod +x bin/rubocop
 
