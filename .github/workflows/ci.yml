@@ -87,6 +87,9 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      - name: Update shebang for Ruby
+        run: sed -i '1s|.*|#!/usr/bin/env ruby|' bin/ruby
+
       - name: Set permission for rubocop
         run: chmod +x bin/rails
 
