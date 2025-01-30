@@ -87,7 +87,10 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - name: Set permission for ruby
+      - name: Update shebang for rails
+        run: sed -i '1s|.*|#!/usr/bin/env ruby|' bin/rails  
+
+      - name: Set permission for rails
         run: chmod +x bin/rails
 
       - name: Run tests
