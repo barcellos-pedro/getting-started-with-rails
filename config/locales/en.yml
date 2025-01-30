@@ -7,3 +7,4 @@ en:
   products:
     index:
       title: 'Products'
+      new_btn: 'New Product'
