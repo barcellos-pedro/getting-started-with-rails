@@ -49,12 +49,12 @@ class ProductsController < ApplicationController
         Product.find(params[:id])
       rescue ActiveRecord::RecordNotFound => err
         logger.debug err
-        nil
+        raise err
       end
     end
 
     def product_params
       puts "### Params \n" + params.inspect
-      params.expect(product: [ :name, :description, :featured_image ])
+      params.expect(product: [ :name, :description, :featured_image, :inventory_count ])
     end
 end
