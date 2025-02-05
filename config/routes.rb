@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
 
   # All routes (CRUD)
-  resources :products
+  resources :products do
+    resources :subscribers, only: [:create]
+  end
 
   get "up" => "rails/health#show", as: :rails_health_check
 

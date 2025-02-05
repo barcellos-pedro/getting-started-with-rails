@@ -1,10 +1,13 @@
 es:
   greet: "Hola mundo"
+  product_mailer:
+    in_stock:
+      subject: '¡Producto disponible!'
   nav:
     home: 'Inicio'
     login: 'Ingresar'
     logout: 'Salir'
   products:
-      index:
-        title: 'Productos'
-        new_btn: 'Nuevo Producto'
+    index:
+      title: 'Productos'
+      new_btn: 'Nuevo Producto'

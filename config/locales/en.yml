@@ -1,5 +1,8 @@
 en:
   greet: "Hello world"
+  product_mailer:
+    in_stock:
+      subject: 'Product available!'
   nav:
     home: 'Home'
     login: 'Login'
