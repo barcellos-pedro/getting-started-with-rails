@@ -1,5 +1,7 @@
 <% content_for :title, "Product - #{@product.name}" %>
 
+<p><%= link_to "Back", products_path %><p>
+
 <%= image_tag @product.featured_image if @product.featured_image.attached? %>
 
 <%= cache @product do %>
