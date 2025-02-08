@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root "products#index"
 
+  # Auth resources
   resource :session
-
   resources :passwords, param: :token
 
   # All routes (CRUD)
@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :subscribers, only: [:create]
   end
 
+  resource :unsubscribe, only: [:show]
+
+  # Health Check
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Detailed Product resources (CRUD)
