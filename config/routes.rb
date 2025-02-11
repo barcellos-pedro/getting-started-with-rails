@@ -7,10 +7,10 @@ Rails.application.routes.draw do
 
   # All routes (CRUD)
   resources :products do
-    resources :subscribers, only: [:create]
+    resources :subscribers, only: [ :create ]
   end
 
-  resource :unsubscribe, only: [:show]
+  resource :unsubscribe, only: [ :show ]
 
   # Health Check
   get "up" => "rails/health#show", as: :rails_health_check
