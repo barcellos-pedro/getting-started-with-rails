@@ -8,13 +8,13 @@ Now i am going to add the recommend features and deploy updates to continue lear
 
 - [x] Add product reviews
 
-- [] Add wishlists for users to save products
+- [ ] Add wishlists for users to save products
 
-- [] Add a checkout flow for payments
+- [ ] Add a checkout flow for payments
 
-- [] Finish translating the app into another language
+- [ ] Finish translating the app into another language
 
-- [] Add a carousel for product images
+- [ ] Add a carousel for product images
 
 And also use the recommend learning materials from the Ruby on Rails Guides:
 
