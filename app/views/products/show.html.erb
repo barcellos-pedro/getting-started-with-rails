@@ -9,7 +9,11 @@
   <%= @product.description %>
 <% end %>
 
-<%= render 'inventory', product: @product %>
+<hr>
+
+<%= render 'inventory', product: @product %> <br>
+<%= render 'reviews/form', product: @product %> <br>
+<%= render 'reviews', reviews: @product.reviews %>
 
 <div style="display: flex; gap: 1em; margin-top: 3em">
   <%= link_to "Back", products_path %>

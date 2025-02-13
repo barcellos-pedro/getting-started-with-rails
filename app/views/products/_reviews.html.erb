@@ -1,0 +1,15 @@
+<div id='reviews'>
+  <% if reviews.any? %>
+    <details>
+      <summary>Customer Reviews</summary>
+      <ul>
+        <% reviews.each do |review| %>
+          <li>
+            <%= review.body %> -
+            <%= time_ago_in_words(review.created_at) %> ago
+            </li>
+        <% end %>
+      </ul>
+  </details>
+  <% end %>
+</div>

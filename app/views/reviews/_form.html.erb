@@ -1,0 +1,5 @@
+<%= form_with model: [product, Review.new] do |form| %>
+  <%= form.label :body, 'Tell us what you think :)', style: 'margin-bottom: 0.5em' %>
+  <%= form.text_field :body, style: 'margin-right: 1em' %>
+  <%= form.submit 'Post Review' %>
+<% end %>
