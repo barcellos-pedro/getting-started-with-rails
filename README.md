@@ -1,24 +1,31 @@
-# README
+# What's Next?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my first first Rails application that i built following the getting started tutorial.
 
-Things you may want to cover:
+Now i am going to add the recommend features and deploy updates to continue learning. Here are some of the ideas given by the tutorial:
 
-* Ruby version
+- [x] Improve the design with CSS ([Simple.css](https://simplecss.org/))
 
-* System dependencies
+- [x] Add product reviews
 
-* Configuration
+- [ ] Add wishlists for users to save products
 
-* Database creation
+- [ ] Add a checkout flow for payments
 
-* Database initialization
+- [ ] Finish translating the app into another language
 
-* How to run the test suite
+- [ ] Add a carousel for product images
 
-* Services (job queues, cache servers, search engines, etc.)
+And also use the recommend learning materials from the Ruby on Rails Guides:
 
-* Deployment instructions
+- [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html)
 
-* ...
+- [Layouts and Rendering in Rails](https://guides.rubyonrails.org/layouts_and_rendering.html)
+
+- [Testing Rails Applications](https://guides.rubyonrails.org/testing.html)
+
+- [Debugging Rails Applications](https://guides.rubyonrails.org/debugging_rails_applications.html)
+
+- [Securing Rails Applications](https://guides.rubyonrails.org/security.html)
+
+Thanks for checking out!
