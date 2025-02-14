@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # All routes (CRUD)
   resources :products do
     resources :subscribers, only: [ :create ]
-    resources :reviews
+    resources :reviews, only: [ :create ]
   end
 
   resource :unsubscribe, only: [ :show ]
