@@ -1,10 +1,10 @@
-# What's Next?
+# So, what's Next?
 
 This is my first first Rails application that i built following the getting started tutorial.
 
 Now i am going to add the recommend features and deploy updates to continue learning. Here are some of the ideas given by the tutorial:
 
-- [x] Improve the design with CSS ([Simple.css](https://simplecss.org/))
+- [x] Improve the design with [CSS](https://simplecss.org/)
 
 - [x] Add product reviews
 
